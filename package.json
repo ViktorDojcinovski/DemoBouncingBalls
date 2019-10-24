@@ -5,12 +5,26 @@
   "main": "lib/server.js",
   "author": "Viktor Dojchinovski",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --exec babel-node lib/server.js"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "env",
+      "stage-2"
+    ]
+  },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "eslint": "^6.5.1",
     "eslint-plugin-react": "^7.16.0"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "ejs": "^2.7.1",
