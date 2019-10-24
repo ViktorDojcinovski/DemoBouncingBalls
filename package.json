@@ -1,0 +1,17 @@
+{
+  "name": "bouncing-balls",
+  "version": "1.0.0",
+  "description": "Bouncing Balls Demo React.js App",
+  "main": "lib/server.js",
+  "author": "Viktor Dojchinovski",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.1",
+    "eslint-plugin-react": "^7.16.0"
+  },
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  }
+}
