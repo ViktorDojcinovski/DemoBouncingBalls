@@ -8,21 +8,29 @@
   "scripts": {
     "dev": "nodemon --exec babel-node lib/server.js",
     "webpack": "webpack -wd",
+    "webpack-prod": "webpack -p",
+    "node": "babel lib -d build --copy-files",
     "test": "jest --watch",
+    "coverage": "jest --coverage",
     "docs": "jsdoc -c ./jsdoc.json"
   },
   "babel": {
     "presets": [
-      "react",
-      "env",
-      "stage-2"
+      "react", ["env", { "targets": { "node": "current" } }]
+    ],
+    "plugins": [
+      "transform-class-properties",
+      "transform-object-rest-spread"
     ]
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "better-docs": "^1.3.3",
-    "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.4.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.3",
+    "eslint": "6.6.0",
+    "eslint-config-prettier": "6.5.0",
     "eslint-plugin-react": "^7.16.0",
     "jest": "23",
     "jsdoc": "^3.6.3",
@@ -45,5 +53,13 @@
     "react-dom": "^16.11.0",
     "styled-components": "^4.4.0",
     "webpack": "^4.41.2"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "./setupTests.js"
+    ]
   }
 }
