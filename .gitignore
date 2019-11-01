@@ -10,6 +10,8 @@
 
 # production
 /build
+/public/vendor.js
+/public/app.js
 
 # misc
 .DS_Store
