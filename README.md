@@ -4,7 +4,7 @@ Bouncing Balls is demo isomorphic app built with JavaScript.
 
 ## Installation
 
-For running in development mode first navigate to root folder and run npm install. Then run
+For running in development mode first navigate to root folder and run npm install or yarn add. Then run
 
 ```bash
 yarn dev
