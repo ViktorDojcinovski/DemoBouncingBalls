@@ -10,7 +10,7 @@ For running in development mode first navigate to root folder and run npm instal
 yarn dev
 ```
 
-the app opens a port default on 8002. Create environment variable in order to run on another port.
+the app opens at port default on 8002. Create environment variable in order to run on another port.
 
 ```bash
 yarn webpack
